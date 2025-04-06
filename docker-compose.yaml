@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+ shinobi_proxy:
+      image: 'nocrail/shinobi-ha-tg-switch:tagname'
+      container_name: shinobi_proxy
+      restart: unless-stopped
+      ports:
+        '8085:8080'
+      environment:
+        SHINOBI_USERNAME: 'admin'
+        SHINOBI_PASSWORD: 'admin'
+        API_KEY: 'e0E6EEEeeeeE3eEeEefee2eeOeIE8e'
+        API_GROUP: '2E2e2EEeEE'
+        SHINOBI_URL: 'http://192.168.0.1:8080'
